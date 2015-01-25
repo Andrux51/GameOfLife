@@ -1,4 +1,4 @@
-angular.module('generation',['ngRoute'])
+var generation = angular.module('generation',['ngRoute'])
 	.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
 		$locationProvider.html5Mode({enabled:true,requireBase:true,rewriteLinks:true});
 		$routeProvider.when('/', {controller: 'appController', templateUrl: 'partial.html'});
