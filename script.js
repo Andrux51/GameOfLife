@@ -1,6 +1,6 @@
 var generation = angular.module('generation',['ngRoute'])
 	.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
-		$locationProvider.html5Mode({enabled:true,requireBase:true,rewriteLinks:true});
+		$locationProvider.hashPrefix('!');
 		$routeProvider.when('/', {controller: 'appController', templateUrl: 'partial.html'});
 		$routeProvider.otherwise({redirectTo: '/'});
 	}])
@@ -17,7 +17,8 @@ var generation = angular.module('generation',['ngRoute'])
 						x: x,
 						y: y,
 						alive: false,
-						surviving: false
+						surviving: false,
+						adjacent: 0
 					}
 					// start with random number of live cells
 					if(Math.floor(Math.random() * 2) === 1) newCell.alive = true;
@@ -27,18 +28,18 @@ var generation = angular.module('generation',['ngRoute'])
 			$scope.countAlive();
 		};
 
-		$scope.createNewGeneration = function() {
+		$scope.advanceGeneration = function() {
 			for(var k in $scope.cells) {
 				var cellToCheck = $scope.cells[k];
-				var adjacent = 0;
+				cellToCheck.adjacent = 0;
 				// check adjacent cells for life - in this case, no check for edge cells is required, but it would be possible if necessary
 				for(var i = -1; i < 2; i++) {
 					for(var j = -1; j < 2; j++) {
 						// do not check the "center" cell
-						if(i !== 0 && j !== 0) {
+						if(!(i === 0 && j === 0)) {
 							$scope.cells.filter(function(elem, index, array) {
 								if(elem.x === cellToCheck.x+i && elem.y === cellToCheck.y+j) {
-									if(elem.alive) adjacent++;
+									if(elem.alive) cellToCheck.adjacent++;
 								}
 							});
 						}
@@ -46,16 +47,16 @@ var generation = angular.module('generation',['ngRoute'])
 				}
 				// live cells need exactly 2-3 living neighbours to live, otherwise they die
 				// dead cells need exactly 3 living neighbours to revive
-				if(adjacent === 3 || adjacent === 2 && cellToCheck.alive) {
+				if(cellToCheck.adjacent === 3 || (cellToCheck.adjacent === 2 && cellToCheck.alive)) {
 					cellToCheck.surviving = true;
 				} else {
 					cellToCheck.surviving = false;
 				}
 			}
-			$scope.advanceGeneration();
+			$scope.handleSurvivors();
 		};
 
-		$scope.advanceGeneration = function() {
+		$scope.handleSurvivors = function() {
 			for(var k in $scope.cells) {
 				if($scope.cells[k].surviving) {
 					$scope.cells[k].alive = true;
