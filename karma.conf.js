@@ -44,6 +44,7 @@ module.exports = function(config) {
       dir: '.',
       reporters: [
         { type: 'html', subdir: 'report-html' },
+	{ type: 'lcov', subdir: 'report-lcov' },
 	{ type: 'lcovonly', subdir: '.', file: 'report-lcovonly.txt' }
       ]
     },

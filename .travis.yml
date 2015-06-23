@@ -5,4 +5,6 @@ node_js:
 before_script:
   - "npm install -g bower karma-cli"
   - "bower install"
+after_script:
+  - "cat report-lcovonly.txt | ./node_modules/coveralls/bin/coveralls.js"
 

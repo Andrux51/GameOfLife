@@ -4,6 +4,7 @@
   "description": "GameOfLife\r ==========",
   "main": "karma.conf.js",
   "dependencies": {
+    "coveralls": "^2.11.2",
     "jasmine-core": "^2.1.3",
     "karma": "^0.12.31",
     "karma-jasmine": "^0.3.5",
