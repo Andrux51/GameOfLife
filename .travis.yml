@@ -3,5 +3,6 @@ node_js:
   - "node"
   - "iojs"
 before_script:
+  - "npm install -g bower karma-cli"
   - "bower install"
 
