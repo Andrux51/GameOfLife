@@ -2,4 +2,5 @@ bower_components/
 node_modules/
 report-html/
 report-lcov/
+report-lcovonly.txt
 coverage/
