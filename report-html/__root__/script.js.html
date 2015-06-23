@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for ./script.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../prettify.css">
+    <link rel="stylesheet" href="../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header high">
+    <h1>Code coverage report for <span class="entity">./script.js</span></h1>
+    <h2>
+        Statements: <span class="metric">100% <small>(39 / 39)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">100% <small>(19 / 19)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">100% <small>(8 / 8)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">100% <small>(36 / 36)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../index.html">All files</a> &#187; <a href="index.html">__root__/</a> &#187; ./script.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18</span>
+<span class="cline-any cline-yes">18</span>
+<span class="cline-any cline-yes">18</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18</span>
+<span class="cline-any cline-yes">17</span>
+<span class="cline-any cline-yes">17</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17</span>
+<span class="cline-any cline-yes">170</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1700</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1700</span>
+<span class="cline-any cline-yes">1700</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">702</span>
+<span class="cline-any cline-yes">702</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">702</span>
+<span class="cline-any cline-yes">2106</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6318</span>
+<span class="cline-any cline-yes">5616</span>
+<span class="cline-any cline-yes">560032</span>
+<span class="cline-any cline-yes">4790</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">702</span>
+<span class="cline-any cline-yes">240</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">462</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-yes">1002</span>
+<span class="cline-any cline-yes">352</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">650</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18</span>
+<span class="cline-any cline-yes">2602</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">var generation = angular.module('generation',['ngRoute'])
+	.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
+		$locationProvider.hashPrefix('!');
+		$routeProvider.when('/', {controller: 'appController', templateUrl: 'partial.html'});
+		$routeProvider.otherwise({redirectTo: '/'});
+	}])
+	.controller('appController',['$scope', function($scope) {
+		$scope.init = function() {
+			$scope.currentGeneration = 1;
+			$scope.cells = [];
+&nbsp;
+			// Create 10x10 grid of cells
+			for(var y = 0; y &lt; 10; y++) {
+				for(var x = 0; x &lt; 10; x++) {
+					// push a new cell into the array - needs a coordinate (x,y) and a bool for alive and bool for if it will be alive (surviving to next generation)
+					var newCell = {
+						x: x,
+						y: y,
+						alive: false,
+						surviving: false,
+						adjacent: 0
+					}
+					// start with random number of live cells
+					if(Math.floor(Math.random() * 2) === 1) newCell.alive = true;
+					$scope.cells.push(newCell);
+				}
+			}
+			$scope.countAlive();
+		};
+&nbsp;
+		$scope.advanceGeneration = function() {
+			for(var k in $scope.cells) {
+				var cellToCheck = $scope.cells[k];
+				cellToCheck.adjacent = 0;
+				// check adjacent cells for life - in this case, no check for edge cells is required, but it would be possible if necessary
+				for(var i = -1; i &lt; 2; i++) {
+					for(var j = -1; j &lt; 2; j++) {
+						// do not check the "center" cell
+						if(!(i === 0 &amp;&amp; j === 0)) {
+							$scope.cells.filter(function(elem, index, array) {
+								if(elem.x === cellToCheck.x+i &amp;&amp; elem.y === cellToCheck.y+j) {
+									if(elem.alive) cellToCheck.adjacent++;
+								}
+							});
+						}
+					}
+				}
+				// live cells need exactly 2-3 living neighbours to live, otherwise they die
+				// dead cells need exactly 3 living neighbours to revive
+				if(cellToCheck.adjacent === 3 || (cellToCheck.adjacent === 2 &amp;&amp; cellToCheck.alive)) {
+					cellToCheck.surviving = true;
+				} else {
+					cellToCheck.surviving = false;
+				}
+			}
+			$scope.handleSurvivors();
+		};
+&nbsp;
+		$scope.handleSurvivors = function() {
+			for(var k in $scope.cells) {
+				if($scope.cells[k].surviving) {
+					$scope.cells[k].alive = true;
+				} else {
+					$scope.cells[k].alive = false;
+				}
+			}
+			$scope.currentGeneration++;
+			$scope.countAlive();
+		}
+&nbsp;
+		$scope.countAlive = function() {
+			$scope.alive = $scope.cells.filter(function(elem) { return elem.alive; });
+		}
+	}]);</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Jun 23 2015 13:36:22 GMT-0600 (Mountain Daylight Time)</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
