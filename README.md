@@ -1,4 +1,4 @@
-GameOfLife
+GameOfLife [![Build Status](https://travis-ci.org/Andrux51/GameOfLife.svg?branch=master)](https://travis-ci.org/Andrux51/GameOfLife) [![Code Climate](https://codeclimate.com/github/Andrux51/GameOfLife/badges/gpa.svg)](https://codeclimate.com/github/Andrux51/GameOfLife) [![Coverage Status](https://coveralls.io/repos/Andrux51/GameOfLife/badge.svg?branch=master)](https://coveralls.io/r/Andrux51/GameOfLife?branch=master)
 ==========
 
 Game of Life "genetic experiment"
